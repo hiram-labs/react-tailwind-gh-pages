@@ -1,7 +1,7 @@
 {
   "name": "react-tailwind-gh-pages",
   "version": "1.0.0",
-  "description": "Static website builder template, UI configured with Tailwind CSS, Build optimise to seamlessly deploy on GitHub Pages.",
+  "description": "React static website builder template, UI configured with Tailwind CSS, Build optimise to seamlessly deploy on GitHub Pages.",
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production && cp -a dist/. docs/dist && cp -a public/. docs",
