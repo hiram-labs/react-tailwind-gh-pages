@@ -35,8 +35,6 @@
     "file-loader": "^6.1.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.1",
-    "sass": "^1.26.10",
-    "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "ts-loader": "^8.0.3",
     "typed-scss-modules": "^3.0.0",
