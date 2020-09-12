@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './header.module.scss';
+import styles from './header.module.css';
 import cx from 'classnames';
 
 interface TProps {}

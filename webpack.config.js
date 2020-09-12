@@ -18,8 +18,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -35,8 +35,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
-    port: 3000,
-    publicPath: 'http://localhost:3000/dist/',
+    port: 5000,
+    publicPath: 'http://localhost:5000/dist/',
     hotOnly: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]

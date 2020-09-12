@@ -1,12 +1,12 @@
 {
-  "name": "react-typescript-scaffold",
+  "name": "react-tailwind-gh-pages",
   "version": "1.0.0",
-  "description": "A react application scaffold setup with typescript.",
+  "description": "Static website builder template, UI configured with Tailwind CSS, Build optimise to seamlessly deploy on GitHub Pages.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production && cp -a dist/. docs/dist && cp -a public/. docs",
-    "start": "webpack-dev-server --mode development & npx tsm src --watch --ignoreInitial --ignore '**/app.scss'",
-    "start-no-tsm": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development",
+    "start-tcm": "webpack-dev-server --mode development & tcm src/components --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.*' --write"
   },
@@ -14,13 +14,13 @@
   "sponsor": "Hiram Labs Ltd",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/hiram-labs/react-typescript-scaffold/issues"
+    "url": "https://github.com/hiram-labs/react-tailwind-gh-pages/issues"
   },
-  "homepage": "https://github.com/hiram-labs/react-typescript-scaffold#readme",
+  "homepage": "https://github.com/hiram-labs/react-tailwind-gh-pages#readme",
   "email": "adjeibohyen@hotmail.co.uk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hiram-labs/hiram-labs.github.io.git"
+    "url": "https://github.com/hiram-labs/react-tailwind-gh-pages.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
@@ -29,15 +29,18 @@
     "@babel/preset-react": "^7.10.4",
     "@types/react": "^16.9.49",
     "babel-loader": "^8.1.0",
-    "css-loader": "^4.2.2",
+    "css-loader": "^1.0.1",
     "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
     "file-loader": "^6.1.0",
     "husky": "^4.3.0",
+    "postcss": "^7.0.32",
+    "postcss-loader": "^4.0.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.1",
     "style-loader": "^1.2.1",
     "ts-loader": "^8.0.3",
-    "typed-scss-modules": "^3.0.0",
+    "typed-css-modules": "^0.6.4",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
@@ -46,12 +49,14 @@
   "dependencies": {
     "@types/classnames": "^2.2.10",
     "@types/jquery": "^3.5.1",
+    "autoprefixer": "^9.8.6",
     "classnames": "^2.2.6",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.0",
+    "tailwindcss": "^1.8.8"
   }
 }
