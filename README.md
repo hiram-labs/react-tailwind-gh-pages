@@ -48,9 +48,9 @@ Start a new local workspace in VScode or prefered editor and in the terminal
 
 In the **react-tailwind-gh-pages** directory
 
-- npm start-tcm \> // _this will start the dev environment with hot reload and a css '.d.ts' file maker for module styles_
-- npm start \> // _this will only start the dev environment and hot reload_
-- from local browser open http://localhost:3000/
+- npm start-tcm // _this will start the dev environment with hot reload and a css '.d.ts' file maker for module styles_
+- npm start // _this will only start the dev environment and hot reload_
+- from local browser open http://localhost:5000/
 
 ---
 
@@ -64,6 +64,6 @@ In the react-tailwind-gh-pages.git directory
 
 **HINT**
 
-Husky hooks is used to auto run **npm build** on every commit.
+Husky Hooks is used to auto run **npm build** on every commit.
 
 Because this build happens after commit it is always import to check **git status** again before push to make sure no new files have been put in staging.

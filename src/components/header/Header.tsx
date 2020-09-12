@@ -9,6 +9,7 @@ interface TProps {}
  *
  */
 const Header: React.FC<TProps> = (): JSX.Element => {
+  console.log(styles.container);
   return <div className={cx(styles.container)}>header</div>;
 };
 
