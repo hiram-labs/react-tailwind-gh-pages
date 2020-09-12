@@ -48,8 +48,7 @@ Start a new local workspace in VScode or prefered editor and in the terminal
 
 In the **react-tailwind-gh-pages** directory
 
-- npm start-tcm // _this will start the dev environment with hot reload and a css '.d.ts' file maker for module styles_
-- npm start // _this will only start the dev environment and hot reload_
+- npm start
 - from local browser open http://localhost:5000/
 
 ---

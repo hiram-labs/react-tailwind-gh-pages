@@ -9,7 +9,15 @@ interface TProps {}
  *
  */
 const Body: React.FC<TProps> = (): JSX.Element => {
-  return <div className={cx(styles.container)}>Body</div>;
+  return (
+    <div className={cx(styles.container, 'flex justify-center')}>
+      <img
+        className="w-1/3"
+        src="images/logo/logo_white.png"
+        alt="hiram labs ltd - logo"
+      />
+    </div>
+  );
 };
 
 export default Body;

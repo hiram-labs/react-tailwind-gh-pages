@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -19,6 +20,21 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        exclude: /\.global.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1
+            }
+          },
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.global.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
@@ -39,5 +55,10 @@ module.exports = {
     publicPath: 'http://localhost:5000/dist/',
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new TypedCssModulesPlugin({
+      globPattern: 'src/components/**/*.css'
+    })
+  ]
 };

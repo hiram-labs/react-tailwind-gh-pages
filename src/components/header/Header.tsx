@@ -9,8 +9,17 @@ interface TProps {}
  *
  */
 const Header: React.FC<TProps> = (): JSX.Element => {
-  console.log(styles.container);
-  return <div className={cx(styles.container)}>header</div>;
+  return (
+    <div className={cx(styles.container, 'my-4')}>
+      <div className="text-center">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          <a href="https://github.com/hiram-labs/react-tailwind-gh-pages#readme">
+            Documentation
+          </a>
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Header;

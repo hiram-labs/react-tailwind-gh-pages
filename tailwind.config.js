@@ -265,6 +265,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'lato',
         'system-ui',
         '-apple-system',
         'BlinkMacSystemFont',

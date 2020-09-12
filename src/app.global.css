@@ -2,8 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.root {
-  font-family: 'Lato', sans-serif;
-  width: 100%;
+html,
+body {
   height: 100%;
+  background: black;
+}
+
+.app-wrapper {
+  color: white;
 }

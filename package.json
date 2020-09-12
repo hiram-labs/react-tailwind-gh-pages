@@ -6,7 +6,6 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production && cp -a dist/. docs/dist && cp -a public/. docs",
     "start": "webpack-dev-server --mode development",
-    "start-tcm": "webpack-dev-server --mode development & tcm src/components --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.*' --write"
   },
@@ -40,7 +39,7 @@
     "prettier": "^2.1.1",
     "style-loader": "^1.2.1",
     "ts-loader": "^8.0.3",
-    "typed-css-modules": "^0.6.4",
+    "typed-css-modules-webpack-plugin": "^0.2.0",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
