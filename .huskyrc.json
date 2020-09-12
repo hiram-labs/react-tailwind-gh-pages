@@ -1,6 +1,6 @@
 {
   "hooks": {
     "pre-commit": "npm run build",
-    "post-commit": "echo '\n-------------------------------------------------------- \n\\033[0;103mPLEASE MAKE SURE THE DOCS FOLDER IS ADDED AND COMMITTED \nCheck with \" git status \" \nIf in staging run \" git add . \" \nAnd \" git commit -m \"your msg\" \"\\033[0m\n-------------------------------------------------------- \n' "
+    "post-commit": "echo '\n-------------------------------------------------------- \n\\033[1;103mPLEASE MAKE SURE THE DOCS FOLDER IS ADDED AND COMMITTED\n Check with \" git status \"\n If in staging run \" git add . \"\n And \" git commit -m \"your msg\" \"\\033[0m\n-------------------------------------------------------- \n' "
   }
 }
