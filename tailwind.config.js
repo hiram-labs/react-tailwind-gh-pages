@@ -6,6 +6,7 @@ module.exports = {
   purge: {
     enable: true,
     content: [
+      './src/*.js',
       './src/*.jsx',
       './src/*.tsx',
       './src/components/**/*.jsx',
