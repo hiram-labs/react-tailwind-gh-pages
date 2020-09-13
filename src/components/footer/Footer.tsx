@@ -14,6 +14,7 @@ const Footer: React.FC<TProps> = (): JSX.Element => {
       <p>open-source project sponsored by</p>
       <p>Hiram Labs Ltd</p>
       <p>2020 | © CC0-1.0</p>
+      <div>{process.env.NODE_ENV}</div>
     </div>
   );
 };
