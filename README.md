@@ -15,16 +15,13 @@ See **deployment** section of this docs for more information on GitHub pages int
 ## File structure
 
 - All components must reside in the **src/components** folder.
-<<<<<<< HEAD
 - The **docs** folder is populate on build and its were GitHub looks for content to host on pages.
 - The **dev** folder contains files for the webpack-dev-server to serve during developement.
 - The **dev/assets** folder is where all assets which will not be processed by webpack should be placed eg images, other, etc.
 - To reference files and folders in the **dev/assets** folder in components use **./assets/[name of folder]/filename.extenstion**
 - By default the Title of the index.html document is set to the name field of the package.json (changing this will change the index.html title) or you can manually change it in the **src/\_index.html** file
 - Links have been added to the \_index.html file for favicons and device icons by default. Just add the appropriate files in **dev/image/icons**. That folder has example icon files and a manifest to use as a guide.
-=======
 - The **docs** folder must always have a subfolder named **dist**
->>>>>>> 93d512d65ece5fb8c5bb97d89ba0a0022508a053
 
 ## Styling
 
@@ -40,7 +37,8 @@ This app allows for modular styling
 
 - Dont forget to **import cx from 'classnames'**
 - Notice **globalClassAsString** is a string type this means the myComponent will look for this class in a global css stylesheet this project uses **app.global.css** in the root directory for this.
-- CSS is used in this project over Sass because of Tailwind, ie using Tailwind there is very little need of writing custom styles. 
+- CSS is used in this project over Sass because of Tailwind, ie using Tailwind there is very little need of writing custom styles.
+
 ## Setup
 
 Start a new local workspace in VScode or prefered editor and in the terminal
