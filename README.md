@@ -63,6 +63,13 @@ Because this build happens after commit it is always import to check **git statu
 
 ## Deployment
 
+Create a new repo on GitHub and follow the instructions to set it up on your local environment.
+
+**NB**
+
+- Do not initialise the repo by adding a README or .gitignore when creating the repo on GitHub.
+- Use the 3rd option to **git init** and **git push origin -u master**
+
 After pushing to GitHub
 
 - In the repo go to **settings**
