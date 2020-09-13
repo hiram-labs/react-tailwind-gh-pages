@@ -17,9 +17,14 @@ interface TProps {
 const Layout: React.FC<TProps> = ({ header, body, footer }): JSX.Element => {
   const thisComponent = useRef<HTMLDivElement>(null); // gets ref for component
 
-  useResponsiveTypo(thisComponent); // trigger the hook
+  useResponsiveTypo(thisComponent); // trigger the hook on load
   return (
-    <div ref={thisComponent}>
+    <div
+      className={
+        'min-h-screen bg-black text-white flex flex-col justify-between'
+      }
+      ref={thisComponent}
+    >
       {header}
       {body}
       {footer}
