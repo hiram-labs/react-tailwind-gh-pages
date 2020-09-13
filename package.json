@@ -4,8 +4,8 @@
   "description": "React static website builder template, UI configured with Tailwind CSS, Build optimise to seamlessly deploy on GitHub Pages.",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production && cp -a dist/. docs/dist && cp -a public/. docs",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js && cp -a dev/assets docs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.*' --write"
   },
@@ -28,10 +28,13 @@
     "@babel/preset-react": "^7.10.4",
     "@types/react": "^16.9.49",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^1.0.1",
     "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
     "file-loader": "^6.1.0",
+    "html-webpack-harddisk-plugin": "^1.0.2",
+    "html-webpack-plugin": "^4.4.1",
     "husky": "^4.3.0",
     "postcss": "^7.0.32",
     "postcss-loader": "^4.0.1",
@@ -43,7 +46,8 @@
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
   },
   "dependencies": {
     "@types/classnames": "^2.2.10",

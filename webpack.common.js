@@ -1,10 +1,9 @@
-const path = require('path');
-const webpack = require('webpack');
 const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
+  entry: {
+    app: './src/_index.js'
+  },
   module: {
     rules: [
       {
@@ -43,20 +42,8 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['*', '.js', '.jsx', '.tsx', '.ts'] },
-  output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
-    filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'public/'),
-    port: 5000,
-    publicPath: 'http://localhost:5000/dist/',
-    hotOnly: true
-  },
+  resolve: { extensions: ['*', '.js', '.jsx', '.ts', '.tsx'] },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new TypedCssModulesPlugin({
       globPattern: 'src/components/**/*.css'
     })
